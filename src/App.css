@@ -1,0 +1,267 @@
+#root {
+  width: 100%;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 40px 20px;
+}
+
+.app h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+/* =====================================================
+   TARJETA PREMIUM
+   ===================================================== */
+.loyalty-card {
+  position: relative;
+  width: 380px;
+  min-height: 620px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 28px;
+  color: white;
+  background:
+    radial-gradient(
+      circle at 85% 15%,
+      rgba(255, 255, 255, 0.12),
+      transparent 30%
+    ),
+    linear-gradient(
+      145deg,
+      #17212b 0%, 
+      #263746 45%,
+      #101820 100%    
+    );
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.30),
+    0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Brillo sutil de la tarjeta */
+.loyalty-card::before {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: -180px;
+  right: -100px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  pointer-events: none;
+}
+
+/* =====================================================
+   ENCABEZADO
+   ===================================================== */
+.loyalty-header {
+  width: 100%;
+  padding: 24px 24px 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+}
+
+.loyalty-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+/* Logo */
+.loyalty-logo-container {
+  width: 58px;
+  height: 58px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow:
+    0 5px 15px rgba(0, 0, 0, 0.20);
+}
+
+.loyalty-logo {
+  width: 46px;
+  height: 46px;
+  object-fit: contain;
+}
+
+/* Nombre del negocio */
+.loyalty-business {
+  max-width: 170px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: 1.5px;
+  white-space: pre-line;
+  overflow-wrap: anywhere;
+}
+
+/* Etiqueta PREMIUM */
+.loyalty-member-badge {
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.20);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+}
+
+/* =====================================================
+   SEPARADOR
+   ===================================================== */
+.loyalty-divider {
+  width: calc(100% - 48px);
+  height: 1px;
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* =====================================================
+   TITULO
+   ===================================================== */
+.loyalty-title {
+  margin-top: 25px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: rgba(255, 255, 255, 0.60);
+}
+
+/* =====================================================
+   CLIENTE
+   ===================================================== */
+.loyalty-customer {
+  margin-top: 7px;
+  padding: 0 20px;
+  font-size: 26px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.15;
+  overflow-wrap: anywhere;
+}
+
+/* =====================================================
+   QR
+   ===================================================== */
+.loyalty-qr-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.loyalty-qr {
+  padding: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  background: white;
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.loyalty-scan-text {
+  margin-top: 8px;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+/* =====================================================
+   PUNTOS
+   ===================================================== */
+.loyalty-points-section {
+  margin-top: 17px;
+  text-align: center;
+}
+
+.loyalty-points-label {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.loyalty-points {
+  margin-top: 1px;
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+/* =====================================================
+   ID CLIENTE
+   ===================================================== */
+.loyalty-id {
+  margin-top: 9px;
+  font-size: 9px;
+  letter-spacing: 1.2px;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+/* =====================================================
+   IMAGEN INFERIOR
+   ===================================================== */
+.loyalty-bottom-image {
+  width: 100%;
+  height: 105px;
+  margin-top: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.loyalty-bottom-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(16, 24, 32, 0.35),      
+      transparent 45%
+    );
+}
+
+.loyalty-bottom-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* =====================================================
+   PANTALLAS PEQUEÑAS
+   ===================================================== */
+@media (max-width: 420px) {
+  .app {
+    padding: 20px 12px;
+  }
+  .loyalty-card {
+    width: 100%;
+    max-width: 380px;
+  }
+}
