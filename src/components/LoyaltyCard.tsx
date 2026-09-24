@@ -25,7 +25,7 @@ export default function LoyaltyCard({
           <div className="loyalty-logo-container">
             <img
               className="loyalty-logo"
-              src="/images/Icon.png"
+              src={`${import.meta.env.BASE_URL}images/Icon.png`}
               alt="Logo del negocio"
             />
           </div>
@@ -90,7 +90,7 @@ export default function LoyaltyCard({
       {/* Imagen inferior */}
       <div className="loyalty-bottom-image">
         <img
-          src="/images/loyalty-bottom.png"
+          src={`${import.meta.env.BASE_URL}images/loyalty-bottom.png`}
           alt=""
         />
       </div>

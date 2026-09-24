@@ -10,7 +10,7 @@ function App() {
         businessName={"La Tiendita\nDe Susanita"}
         customerName="Usuario de Prueba"
         points={0}
-        customerId="0003"
+        customerId="0001"
       />
     </main>
   );
